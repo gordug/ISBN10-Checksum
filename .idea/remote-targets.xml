@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteTargetsManager">
+    <targets>
+      <target name="WSL - Ubuntu-20.04" type="wsl" uuid="e31ddc1f-2e73-4bb2-8205-be2bf0d98e6c">
+        <config>
+          <option name="distributionMsId" value="Ubuntu-20.04" />
+          <option name="projectRootOnTarget" value="/mnt/c/Users/gordu/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/jbr/bin&#10;/isbn_checksum" />
+        </config>
+        <ContributedStateBase type="RsLanguageRuntime">
+          <config>
+            <option name="cargoPath" value="/home/gordug/.cargo/bin/cargo" />
+            <option name="cargoVersion" value="1.65.0 (4bc8f24d3 2022-10-20)" />
+            <option name="rustcPath" value="/home/gordug/.cargo/bin/rustc" />
+            <option name="rustcVersion" value="1.65.0 (897e37553 2022-11-02)" />
+          </config>
+        </ContributedStateBase>
+      </target>
+    </targets>
+  </component>
+</project>
