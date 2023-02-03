@@ -33,16 +33,12 @@ fn main() {
 fn get_checksum (isbn: &str) -> i32 {
     let isbn_format = Regex::new(r"[0-9]-[0-9]{2}-[0-9]{6}-x").unwrap();
     if !isbn_format.is_match(&isbn) {return -1}
-    let isbn = isbn.replace(&['-','x'][..], "");
-    let mut sum :i32 = 0;
-    for (index, character) in isbn.chars().enumerate() {
-        if !character.is_digit(10) {
-            continue
-        }
-        let digit: i32 = character.to_string().parse().unwrap();
-        sum += digit * (index as i32 + 1);
+    let digits = isbn.chars().filter_map(|c| c.to_digit(10));
+    let mut checksum:i32 = 0;
+    for (index, digit ) in digits.enumerate() {
+        checksum += digit as i32 * (index as i32 + 1);
     }
-    let result:i32 = sum % 11;
+    let result:i32 = checksum % 11;
     result
 }
 
